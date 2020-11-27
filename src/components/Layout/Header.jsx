@@ -51,7 +51,7 @@ const Header = () => {
                     <b>{languageType.header.doc.name}</b>
                     <br />
                     <span className="size-primary">
-                      {languageType.header.sri.title}
+                      {languageType.header.doc.title}
                 </span>
                   </div>
                 </div>
@@ -166,11 +166,10 @@ const Header = () => {
                     <img src={Rimg1} alt="img" className="hide_on_large" />
                   </div>
                   <div className="header_box_heading ml-3">
-                    <b>Sri B S Yediyurappa</b>
+                    <b>{languageType.header.sri.name}</b>
                     <br />
                     <span className="header_box_info size-primary">
-                      Hon’ble Chief Minister <br />
-                      Government of Karnataka
+                    {languageType.header.sri.title}
                 </span>
                   </div>
                 </div>
@@ -183,12 +182,10 @@ const Header = () => {
                     <img src={Rimg2} alt="img" className="hide_on_large" />
                   </div>
                   <div className="header_box_heading ml-3">
-                    <b>Dr Ashwath Narayan </b>
+                    <b>{languageType.header.doc.name} </b>
                     <br />
                     <span className="header_box_info size-primary">
-                      Hon’ble Deputy Chief Minister
-                      Higher Education, Medical Education,
-                      IT, BT
+                    {languageType.header.doc.title}
                 </span>
                   </div>
                 </div>
@@ -203,7 +200,7 @@ const Header = () => {
             </div>
             <div
               className="size-primary ml-2 w-20">
-              Government of <br /> Karnataka
+                 {languageType.header.main}
               </div>
           </div>
           <div className="d-flex align-items-center justify-content-between">
@@ -211,12 +208,14 @@ const Header = () => {
               <button
                 type="button"
                 className="btn py-0 btn-secondary btn-outline-theme btn-theme"
+                onClick={()=>setLanguage("en")}
               >
                 EN
                 </button>
               <button
                 type="button"
                 className="btn py-0 d-flex align-items-center btn-outline-secondary btn-outline-theme"
+                onClick={()=>setLanguage("hi")}
               >
                 <img src={text} width="9" alt="imglanguage" />
               </button>
@@ -232,18 +231,15 @@ const Header = () => {
                 <span onClick={closeNav} className="h1 text-right d-block pointer-event px-4" style={{ cursor: `pointer` }}>&times;</span>
               </div>
               <ul className="list-unstyled mt-3">
-                <li><Link onClick={closeNav} to="/">Home</Link></li>
-                <li className="line my-2"></li>
-                <li><Link onClick={closeNav} to="/youth">Youth Service</Link></li>
-                <li><Link onClick={closeNav} to="/counselling">Counselling</Link></li>
-                <li className="line my-2"></li>
-                <li><Link onClick={closeNav} to="/events">Upcoming Events</Link></li>
-                <li><Link onClick={closeNav} to="/signup">Sign Up</Link></li>
+                <li><Link onClick={closeNav} to="/">{languageType.header.links[0]}</Link></li>
+                <li><Link onClick={closeNav} to="/youth">{languageType.header.links[1]}</Link></li>
+                <li><Link onClick={closeNav} to="/counselling">{languageType.header.links[2]}</Link></li>
+                <li><Link onClick={closeNav} to="/events">{languageType.header.links[3]}</Link></li>
               </ul>
             </div>
           </div>
 
-        </div>
+        </div>                
       </header>
     </div>
   );

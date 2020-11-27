@@ -245,7 +245,7 @@ html {
   transition: all .2s
 }
 
-.activities_right>*::before {
+.activities_active::before {
   position: absolute;
   width: 0px;
   height: 2px;
@@ -257,10 +257,13 @@ html {
 }
 
 .activities_right>*:hover {
-  font-size: 20px
+  color: var(--primary);
 }
 
-.activities_right>*:hover::before {
+.activities_active{
+  font-size: 30px
+}
+.activities_active::before {
   width: 30px
 }
 
