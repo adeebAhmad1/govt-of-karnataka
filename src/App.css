@@ -6,8 +6,9 @@
   box-sizing: border-box;
 }
 
-body{
+html,body{
   overflow-x: hidden;
+  touch-action: manipulation;
 }
 
 html {
@@ -820,7 +821,7 @@ button:focus {
 }
 
 #search a {
-  margin: 20px 20px;
+  margin: 20px;
   color: white;
 }
 
