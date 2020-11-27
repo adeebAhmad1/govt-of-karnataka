@@ -26,6 +26,8 @@ const Education = () => {
       case("-"):
         setHeading(buttons[i-1 >= 0 ? i - 1 : buttons.length-1]);
         break;
+      default:
+        setHeading(heading);
     }
   }
   const showBtns = () => {
