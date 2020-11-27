@@ -60,13 +60,6 @@ html {
   }
 }
 
-@media (max-width: 786px) {
-  :root {
-    --font-primary: 10.4px;
-  }
-
-}
-
 .bg-light {
   background-color: var(--bg-light) !important;
 }
@@ -412,7 +405,7 @@ body.nav_active .side-nav {
   }
 
   :root {
-    --font-primary: 10.4px;
+    --font-primary: 12px;
   }
 
   .services_text {
@@ -1144,7 +1137,7 @@ p.blue {
       grid-template-columns: 1fr;
   }
 .breadcrumb1 a{
-  font-size: 8px !important;
+  font-size: 10px !important;
 }
 }
 
