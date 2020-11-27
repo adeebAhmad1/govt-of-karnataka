@@ -13,7 +13,7 @@ function SelectCards({options,selectDistrict,searchId,placeSearchDistrict}) {
         <>
             <div className="mc1-card mb-lg-3 mb-0 p-lg-3 px-2 py-3">
                 <p className="blue hide_on_med p">{selectDistrict}</p>
-                {window.innerWidth > 768 ? <input type="text" name={searchId} id={searchId} placeholder={placeSearchDistrict} /> : <select className="select-mb"> {options.map((el,i)=> <option value={el} key={i}> {el} </option>)} </select>}
+                {window.innerWidth > 768 ? <input type="text" name={searchId} id={searchId} placeholder={placeSearchDistrict} /> : <select className="select-mb bg-white"> {options.map((el,i)=> <option value={el} key={i}> {el} </option>)} </select>}
                 {window.innerWidth > 768 ? showOptions() : ""}
             </div>
         </>
