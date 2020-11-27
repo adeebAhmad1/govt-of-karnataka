@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import img1 from "../../images/bitmap-copy-3@3x.png";
 import img2 from "../../images/logo-1-removebg-preview@3x.png";
 import img3 from "../../images/bitmap-copy-4@3x.png";
@@ -13,12 +13,17 @@ import { useLanguage } from "../../context/LanguageContext";
 
 const Header = () => {
   const { languageType,setLanguage,language } = useLanguage();
+  const [open,setOpen] = useState(false);
   const openNav = () => {
     document.body.classList.add("nav_active");
   };
   const closeNav = () => {
     document.body.classList.remove("nav_active");
   };
+  const onClick = e=>{
+    e.preventDefault();
+    setOpen(o=>!o);
+  }
   return (
     <div>
       <header className="shadow hide_on_med">
@@ -82,9 +87,11 @@ const Header = () => {
                 >
                   {languageType.header.links[0]}
               </NavLink>
-                <NavLink
-                  to="/youth"
+                <a
+                  href="/youth"
+                  onClick={onClick}
                   exact
+                  style={{position: `relative`}}
                   className="header_link mx-3 d-inline-block"
                 >
                   {languageType.header.links[1]}
@@ -107,7 +114,12 @@ const Header = () => {
                       </g>
                     </g>
                   </svg>
-                </NavLink>
+                  {open ? <span className="dropdown-content">
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+  </span> : ""}
+                </a>
                 <NavLink
                   to="/counselling"
                   activeClassName="active"
@@ -207,14 +219,14 @@ const Header = () => {
             <div className="btn-group mr-2" style={{ float: "right" }} role="group">
               <button
                 type="button"
-                className="btn py-0 btn-secondary btn-outline-theme btn-theme"
+                className={language === "en" ? "btn py-0 btn-secondary btn-outline-theme btn-theme" :"btn py-0 d-flex align-items-center btn-outline-secondary btn-outline-theme"}
                 onClick={()=>setLanguage("en")}
               >
                 EN
                 </button>
               <button
                 type="button"
-                className="btn py-0 d-flex align-items-center btn-outline-secondary btn-outline-theme"
+                className={language === "hi" ? "btn py-0 btn-secondary btn-outline-theme btn-theme" :"btn py-0 d-flex align-items-center btn-outline-secondary btn-outline-theme"}
                 onClick={()=>setLanguage("hi")}
               >
                 <img src={text} width="9" alt="imglanguage" />
@@ -232,14 +244,41 @@ const Header = () => {
               </div>
               <ul className="list-unstyled mt-3">
                 <li><Link onClick={closeNav} to="/">{languageType.header.links[0]}</Link></li>
-                <li><Link onClick={closeNav} to="/youth">{languageType.header.links[1]}</Link></li>
+                <li>
+                  <Link onClick={onClick}  to="/youth">
+                    {languageType.header.links[1]} <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="12"
+                    className="float-right"
+                    height="6"
+                    viewBox="0 0 12 6"
+                  >
+                    <g fill="none" fillRule="evenodd">
+                      <g fill="#333" fillRule="nonzero">
+                        <g>
+                          <g>
+                            <path
+                              d="M251.499 11.954c-.009-.149-.058-.29-.14-.4l-3.911-5.333c-.13-.177-.327-.256-.517-.207-.19.05-.344.22-.404.446-.06.227-.017.476.112.653L250.225 12l-3.586 4.887c-.13.177-.172.426-.112.653.06.226.214.396.404.446.19.049.387-.03.517-.207l3.912-5.333c.098-.134.149-.312.139-.492z"
+                              transform="translate(-534 -134) translate(290 120) translate(1 5) rotate(90 249 12)"
+                            />
+                          </g>
+                        </g>
+                      </g>
+                    </g>
+                  </svg>
+                    {open ? <div className="list-unstyled pl-4">
+                      <div>Link 1</div>
+                      <div>Link 2</div>
+                      <div>Link 3</div>
+                    </div> : ""}
+                  </Link>
+                </li>
                 <li><Link onClick={closeNav} to="/counselling">{languageType.header.links[2]}</Link></li>
                 <li><Link onClick={closeNav} to="/events">{languageType.header.links[3]}</Link></li>
               </ul>
             </div>
           </div>
-
-        </div>                
+        </div>
       </header>
     </div>
   );

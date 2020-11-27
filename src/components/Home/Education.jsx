@@ -51,7 +51,7 @@ const Education = () => {
       <div className="py-5">
         <div className="container">
           <div className="text-right">
-            <button className="btn" onClick={()=> onClick("-")}>
+            <button className="btn px-1" onClick={()=> onClick("-")}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="30"
@@ -76,7 +76,7 @@ const Education = () => {
                 </g>
               </svg>
             </button>
-            <button className="btn" onClick={()=> onClick("+")}>
+            <button className="btn px-1" onClick={()=> onClick("+")}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="30"

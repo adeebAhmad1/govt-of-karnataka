@@ -1,10 +1,10 @@
 import React from "react";
 
-const ServiceExplore = ({ children, className }) => {
+const ServiceExplore = ({ children, className,cl }) => {
   return (
-    <div>
+    <div className={"container "+ cl} >
       <div
-        className={"container shadow my_box "+className}
+        className={"shadow my_box "+className}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"

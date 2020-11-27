@@ -1,22 +1,20 @@
 import React from 'react'
 
-function UniCards(props) {
+const UniCards = ({ img, heading, subheading, nba, institute, type }) => {
     return (
-        <>
-            <div className="uni-1">
-                <img src={props.image} alt="" />
-                <h4 className="center h4">{props.text1}</h4>
-                <p className="center p">{props.text2}</p>
-                <button className="btn-gr">{props.text3}</button>
-                <p className="center p">{props.text4}</p>
-                <p className="center p">{props.text5}</p>
-                <div className="uni1-btns">
-                    <button className="btn-o">{props.text6}</button>
-                    <button className="btn-pr">{props.text7}</button>
-                </div>
-            </div>
-        </>
-    )
-}
+      <div className="uni-1">
+        <img src={img} alt="" />
+        <h4 className="center h4">{heading}</h4>
+        <p className="center p">{subheading}</p>
+        <button className="btn-gr">{nba}</button>
+        <p className="center p">{institute}</p>
+        <p className="center p">{type}</p>
+        <div className="uni1-btns">
+          <button className="btn-o">Website</button>
+          <button className="btn-pr">Contact</button>
+        </div>
+      </div>
+    );
+  }
 
 export default UniCards

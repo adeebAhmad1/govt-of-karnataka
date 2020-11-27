@@ -28,13 +28,11 @@ const EducationCard = ({heading}) => {
           </g>
         </svg>
         <br/>
-        <h2 className="font-weight-bold education_card_heading" >{heading}</h2>
+        <h2 className="font-weight-bold education_card_heading">{heading}</h2>
         <p className="mb-4">
         Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit Sed Do Eiusmod Tempor Incididunt  Holistic Personal Development.
         </p>
-        <button className="btn shadow btn-theme btn-outline-theme btn-warning text-white py-2 px-5">
-            Learn More
-          </button>
+        <button className="btn shadow btn-theme btn-outline-theme btn-warning text-white py-2 px-5"> Learn More </button>
       </div>
     </div>
     <div className="col-10 offset-2">

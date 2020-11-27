@@ -6,7 +6,6 @@ const Welfare = () => {
     <div>
       {window.innerWidth > 786 ?
     <section className="bg_welfare hide_on_med">
-      <Zoom>
       <div className="container text-center text-white">
         <h1 className="font-weight-bold">
           Youth Education, Welfare & Employability
@@ -21,7 +20,6 @@ const Welfare = () => {
           </button>
         </div>
       </div>
-      </Zoom>
     </section>
     :
     <section className="col-12 bg_welfare">

@@ -7,7 +7,7 @@ const Services = () => {
   return (
     <section className="py-5 services_section">
       <Slide left>
-      <ServiceExplore className="my-4">
+      <ServiceExplore className="my-4" cl="px-lg-5">
         <div className="row service_card">
           <h1 className="font-weight-bolder box_heading col-4">
             Youth &nbsp; <span className="text-theme"> Services</span>
@@ -24,7 +24,7 @@ const Services = () => {
         </div>
       </ServiceExplore>
       </Slide>
-      <div className="container services_text">
+      <div className="container px-lg-5 services_text">
         <p>
           Yuva is the web portal of Youth Empowerment Centres. Yuva provides
           details of opportunities available in Higher Education and career,
