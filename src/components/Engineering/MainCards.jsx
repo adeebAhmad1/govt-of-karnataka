@@ -97,8 +97,12 @@ function MainCards() {
               <Slide right>
                 <UniCards img={L1Image} heading="M S Ramaiah Institute of Technology" subheading="M.S.R Nagar, Bangalore" nba="NBA:A++" institute="Affiliated to:  Visvesvaraya Technological" type="Type of college  :  Private"/>
                 <UniCards img={L2Image} heading="University Visvesvaraya College of Engineering" subheading="Bangalore, Karnataka" nba="NBA:B++" institute="Affiliated to:  Bangalore University" type="Type of college  :  Private"/>
+              </Slide>
+              <Slide right>
                 <UniCards img={L2Image} heading="University Visvesvaraya College of Engineering" subheading="Bangalore, Karnataka" nba="NBA:B++" institute="Affiliated to:  Bangalore University" type="Type of college  :  Private"/>
                 <UniCards img={L2Image} heading="University Visvesvaraya College of Engineering" subheading="Bangalore, Karnataka" nba="NBA:B++" institute="Affiliated to:  Bangalore University" type="Type of college  :  Private"/>
+                </Slide>
+              <Slide right>
                 <UniCards img={L1Image} heading="University Visvesvaraya College of Engineering" subheading="Bangalore, Karnataka" nba="NBA:B++" institute="Affiliated to:  Bangalore University" type="Type of college  :  Private"/>
                 <UniCards img={L2Image} heading="University Visvesvaraya College of Engineering" subheading="Bangalore, Karnataka" nba="NBA:B++" institute="Affiliated to:  Bangalore University" type="Type of college  :  Private"/>
               </Slide>

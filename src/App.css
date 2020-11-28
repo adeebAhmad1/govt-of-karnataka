@@ -1091,7 +1091,7 @@ p.blue {
   }
 
   #main-cards .m-container {
-      grid-template-columns: 1fr;
+      grid-template-columns: 100%;
   }
 
   #nav .nav-3 {
@@ -1133,6 +1133,7 @@ p.blue {
   .mc-1{
     display: flex;
     min-height: auto !important;
+    height: auto !important;
     overflow-y: hidden !important;
     overflow-x: scroll;
   }
