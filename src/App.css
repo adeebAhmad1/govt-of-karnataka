@@ -425,6 +425,7 @@ body.nav_active .side-nav {
 
   :root {
     --font-primary: 12px;
+    --swiper-navigation-size: 25px !important
   }
 
   .services_text {

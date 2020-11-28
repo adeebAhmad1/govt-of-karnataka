@@ -90,7 +90,6 @@ const Header = () => {
                 <a
                   href="/youth"
                   onClick={onClick}
-                  exact
                   style={{position: `relative`}}
                   className="header_link mx-3 d-inline-block"
                 >
