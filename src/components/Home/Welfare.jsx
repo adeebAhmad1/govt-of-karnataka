@@ -2,14 +2,14 @@ import React from "react";
 import Zoom from 'react-reveal/Zoom';
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.min.css";
-import SwiperCore, { Navigation } from 'swiper';
+import SwiperCore, { Navigation,Autoplay } from 'swiper';
 
-SwiperCore.use([Navigation])
+SwiperCore.use([Navigation,Autoplay])
 const Welfare = () => {
   return (
     <div>
       {window.innerWidth > 786 ?
-    <Swiper loop={true} navigation={true}>
+    <Swiper loop={true} autoplay={{disableOnInteraction: false,delay: 3000}} navigation={true}>
     <SwiperSlide>
     <section className="bg_welfare hide_on_med">
     <div className="container text-center text-white">
