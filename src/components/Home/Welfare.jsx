@@ -30,7 +30,7 @@ const Welfare = () => {
     </SwiperSlide>
   </Swiper>
     :
-    <Swiper loop={true} navigation={true}>
+    <Swiper loop={true} autoplay={{disableOnInteraction: false,delay: 3000}} navigation={true}>
       <SwiperSlide>
     <section className="col-12 bg_welfare">
     <Zoom>
