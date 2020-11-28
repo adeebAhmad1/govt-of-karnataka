@@ -12,6 +12,13 @@ html{
   scroll-behavior: smooth;
 }
 
+.swiper-button-prev{
+  color: var(--bg-light) !important;
+}
+.swiper-button-next{
+  color: var(--bg-light) !important;
+}
+
 .mainApp {
   background-color: #f8f8f8;
 }

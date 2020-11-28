@@ -3,7 +3,7 @@ import NewsCard from '../utils/NewsCard';
 import img3 from "../../images/bitmap-copy-19.png";
 import img1 from "../../images/bitmap-copy-20.png";
 import img2 from "../../images/bitmap-copy-21.png";
-import Zoom from 'react-reveal/Zoom';
+import Fade from 'react-reveal/Fade';
 
 const News = () => {
   return (
@@ -14,7 +14,7 @@ const News = () => {
             <button className="btn-outline-warning px-5 btn btn-outline-theme">View All</button>
           </div>
         </h1>
-        <Zoom left>
+        <Fade left>
           <div className="row px-lg-5">
             <div className="col-lg-4 mb-4">
               <NewsCard img={img1} src="img" />
@@ -26,7 +26,7 @@ const News = () => {
               <NewsCard img={img3} src="img" />
             </div>
           </div>
-        </Zoom>
+        </Fade>
       </div>
     </section>
   );
