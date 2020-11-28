@@ -27,6 +27,25 @@ html{
   display: none;
 }
 
+.header_main{
+  z-index: 1000;
+  width: 100%;
+  box-shadow: 0 0.5rem 3rem rgba(0, 0, 0, 0.4);
+}
+
+.header_main.position-fixed{
+  animation: animate 0.5s;
+}
+
+@keyframes animate {
+  0%{
+    transform: translateY(-100%);
+  }
+  100%{
+    transform: translateY(0);
+  }
+}
+
 :root {
   --bg-light: #f4f2ff;
   --green: #78b345;

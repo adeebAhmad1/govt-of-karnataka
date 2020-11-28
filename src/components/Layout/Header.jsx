@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import img1 from "../../images/bitmap-copy-3@3x.png";
 import img2 from "../../images/logo-1-removebg-preview@3x.png";
 import img3 from "../../images/bitmap-copy-4@3x.png";
@@ -14,6 +14,19 @@ import { useLanguage } from "../../context/LanguageContext";
 const Header = () => {
   const { languageType,setLanguage,language } = useLanguage();
   const [open,setOpen] = useState(false);
+  const header = useRef();
+  const scroll = ()=>{
+    if(window.scrollY > window.innerHeight/2){
+      header.current.classList.add("position-fixed");
+    }
+    if(window.scrollY < window.innerHeight/2){
+      header.current.classList.remove("position-fixed");
+    }
+  }
+  useEffect(()=>{
+    window.addEventListener("scroll",scroll)
+    return ()=>window.removeEventListener("scroll",scroll)
+  },[])
   const openNav = () => {
     document.body.classList.add("nav_active");
   };
@@ -64,7 +77,7 @@ const Header = () => {
             </div>
           </div>
         </Fade>
-        <div className="header_main py-3">
+        <div ref={header} className="header_main bg-white py-3" style={{top: 0}}>
           <div className="container-fluid">
             <div className="row px-5">
               <div className="col-lg-2 d-flex align-items-center">
@@ -93,7 +106,7 @@ const Header = () => {
                   style={{position: `relative`}}
                   className="header_link mx-3 d-inline-block"
                 >
-                  {languageType.header.links[1]}
+                  {languageType.header.links[1]}&nbsp;&nbsp;&nbsp;
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="12"
@@ -245,7 +258,7 @@ const Header = () => {
                 <li><Link onClick={closeNav} to="/">{languageType.header.links[0]}</Link></li>
                 <li>
                   <Link onClick={onClick}  to="/youth">
-                    {languageType.header.links[1]} <svg
+                    {languageType.header.links[1]}  &nbsp; <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="12"
                     className="float-right"

@@ -36,11 +36,11 @@ const Services = () => {
           Features <span className="text-theme">Offerings</span>
         </p>
         <div className="row services_list">
-          <div className="col-lg-6 d-flex">
+          <div className="col-lg-12 d-flex">
             <img src={Rtick} className="" alt="img" />
             <span className="ml-2">Registration</span>
           </div>
-          <div className="col-lg-6 d-flex">
+          <div className="col-lg-12 d-flex">
             <img src={Rtick} className="" alt="img" />
             <span className="ml-2">Career counselling</span>
           </div>
