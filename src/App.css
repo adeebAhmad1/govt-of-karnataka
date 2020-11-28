@@ -1090,7 +1090,9 @@ p.blue {
   .position_relative{
     position: relative !important;
   }
-
+  body{
+    overflow-x: hidden;
+  }
   #main-cards .m-container {
       grid-template-columns: 100%;
   }
