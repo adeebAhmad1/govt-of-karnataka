@@ -115,9 +115,9 @@ const Header = () => {
                     </g>
                   </svg>
                   {open ? <span className="dropdown-content">
-    <a href="#">Link 1</a>
-    <a href="#">Link 2</a>
-    <a href="#">Link 3</a>
+    <Link to="/">Link 1</Link>
+    <Link to="/">Link 2</Link>
+    <Link to="/">Link 3</Link>
   </span> : ""}
                 </a>
                 <NavLink
